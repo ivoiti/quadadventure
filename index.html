@@ -22,12 +22,13 @@ a{color:inherit;text-decoration:none}
 
 /* header */
 .hdr{position:sticky;top:0;z-index:50;background:rgba(20,20,16,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
-.hdr .wrap{display:flex;align-items:center;gap:20px;height:68px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:15px}
-.logo img{height:54px;width:auto}
-.nav{display:flex;gap:22px;margin-left:auto;font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}
+.hdr .wrap{display:flex;align-items:center;gap:18px;height:72px;max-width:1280px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:15px;white-space:nowrap}
+.logo img{height:62px;width:auto}
+.nav{display:flex;gap:16px;margin-left:auto;font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}
+.nav a{white-space:nowrap}
 .nav a:hover{color:var(--acc)}
-.hdr-phone{font-weight:700;font-size:15px}
+.hdr-phone{font-weight:700;font-size:15px;white-space:nowrap}
 @media(max-width:880px){.nav,.hdr-phone{display:none}}
 
 /* hero */
@@ -255,9 +256,10 @@ a{color:inherit;text-decoration:none}
     <div class="calc-total">Итого: <span id="cSum">8 000</span> руб.</div>
     <input type="text" placeholder="Имя">
     <input type="tel" placeholder="Телефон">
-    <input type="text" placeholder="Желаемая дата">
+    <label class="fl">Желаемая дата</label>
+    <input type="date" style="color-scheme:dark">
     <input type="text" placeholder="Промокод (необязательно)">
-    <label class="fcheck"><input type="checkbox"> Я ознакомлен с <a href="#safety">инструкцией по технике безопасности</a> и согласен с условиями</label>
+    <label class="fcheck"><input type="checkbox"><span>Я ознакомлен с <a href="#safety">инструкцией по технике безопасности</a> и согласен с условиями</span></label>
     <button class="btn btn-1">Оставить заявку</button>
     <div class="form-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</div>
   </div>
